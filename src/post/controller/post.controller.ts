@@ -11,24 +11,24 @@ export class PostController {
     getAllPost() {
         return this.postService.getAllPosts();
     }
-    @Get(':id')
-    getPostById(@Param('id') id: string) {
-        return this.postService.getPostById(Number(id));
+    @Get(':content')
+    getPostById(@Param('content') content: string) {
+        return this.postService.getPostById(content);
     }
 
     @Post()
     async createPost(@Body() post: CreatePost) {
-        return this.postService.createPost(post);
+        return this.postService.create(post);
     }
 
-    @Put(':id')
-    async replacePost(@Param('id') id: string, @Body() post: UpdatePost) {
-        return this.postService.replacePost(Number(id), post);
+    @Put(':content')
+    async replacePost(@Param('content') content: string, @Body() post: UpdatePost) {
+        return this.postService.replacePost(content, post);
     }
 
-    @Delete(':id')
-    async deletePost(@Param('id') id: string) {
-        await this.postService.deletePost(Number(id));
+    @Delete(':content')
+    async deletePost(@Param('content') content: string) {
+        await this.postService.deletePost(content);
         return true;
     }
 }

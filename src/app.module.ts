@@ -7,9 +7,10 @@ import { CatsService } from './cats/service/cats.service';
 import { PostController } from './post/controller/post.controller';
 import { PostService } from './post/service/post.service';
 import { PostModule } from './post/post.module';
+import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
-  imports: [CatsModule, PostModule],
+  imports: [CatsModule, PostModule,MongooseModule.forRoot('mongodb://127.0.0.1:27017/nest')],
   controllers: [AppController, ],
   providers: [AppService, ],
 })
