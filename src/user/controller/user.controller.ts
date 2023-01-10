@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { CreateUser } from '../dto/user.dto';
 import { UserService } from '../service/user.service';
 
@@ -13,6 +13,10 @@ export class UserController {
     @Post()
     async createPost(@Body() user: CreateUser) {
         return this.userService.create(user);
+    }
+    @Get(':email')
+    getPostById(@Param('email') email: string) {
+        return this.userService.findOneEmail(email);
     }
 
 }
