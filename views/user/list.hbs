@@ -9,9 +9,9 @@
 <body>
     <ul class="jobs_list">
       {{#each users}}
-        <li>Email : {{email}}</li>
-        <li>Username :{{username}}</li>
-        <li>Password : {{password}}</li>
+        <li>Email : {{this.email}}</li>
+        <li>Username :{{this.username}}</li>
+        <li>Password : {{this.password}}</li>
       {{/each}}
     </ul>
 

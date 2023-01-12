@@ -20,4 +20,10 @@ export class UserService {
     async findOneEmail(email: string): Promise<User | undefined> {
         return this.userModel.findOne({email});
       }
+
+
+    mutipleMongoosetoObject (mongooses ) {
+        return mongooses.map(mongooses => mongooses.toObject());
+    }
+
 }
