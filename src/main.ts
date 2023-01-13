@@ -13,6 +13,13 @@ async function bootstrap() {
       whitelist: true,
     }),
   );
+  /* 
+    Global middleware
+
+    app.use(logger);  logger from cats/middleware/logger.middlewave
+
+  */
+  
   app.useStaticAssets(join(__dirname, '..', 'public'));
   app.setBaseViewsDir(join(__dirname, '..', 'views'));
   app.setViewEngine('hbs');
