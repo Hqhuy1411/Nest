@@ -29,6 +29,6 @@ export class UserController {
     getPostById(@Param('email') email: string) {
         return this.userService.findOneEmail(email);
     }
-
+    
 }
 

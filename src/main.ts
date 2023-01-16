@@ -16,7 +16,7 @@ async function bootstrap() {
   /* 
     Global middleware
 
-    app.use(logger);  logger from cats/middleware/logger.middlewave
+    app.use(logger);  logger from cats/middleware/logger.middleware
 
   */
   

@@ -1,0 +1,10 @@
+<h1>Hello</h1>
+<form action="/todo" method="post">
+    <input type="text" name="name">
+    <input type="submit">
+</form>
+<ul class="jobs_list">
+    {{#each todos}}
+    <li>{{this.name}}</li>
+    {{/each}}
+</ul>
